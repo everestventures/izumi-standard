@@ -6,7 +6,7 @@ The base ERC-20 functionality is inherited from the well-regarded ERC-20 impleme
 
 ## Overview
 
-Izumi Digital Security Standard is a new smart contract standard for issuing and managing security tokens in an efficient,regulatory-compliant manner. It directly inherits both ERC-20 and ERC-1594 to ensure compatibility, while creating rooms for necessary improvements that are unique to securities. 
+Izumi Digital Security Standard is a new smart contract standard for issuing and managing security tokens in an efficient, regulatory-compliant manner. It directly inherits both ERC-20 and ERC-1594 to ensure compatibility, while creating rooms for necessary improvements that are unique to securities. 
 
 Izumi Standard overrides ERC-20 `transfer` to check for transfer restrictions that security laws impose with an upgradable `RegulatorService`. The service is extended to `issuance` and `redemption` (burning), which follow the same laws. On top of traditional issuer or only regulator-initiated transfers, we have left room for individual investors to interact directly with the contract by providing proofs through `transferWith`. A feature that we believe will be increasingly used in the future as transfer restrictions and private information go off-chain.
 
